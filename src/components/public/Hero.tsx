@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLeadFlow } from '../../context/LeadFlowContext';
 import { Phone, CalendarCheck, ShieldCheck, Clock, Award, CheckCircle2 } from 'lucide-react';
+import heroHvacTechnicianImg from '../../assets/images/hero_hvac_technician_1794122697811.jpg';
 
 export const Hero: React.FC = () => {
   const { openQuoteModal, settings } = useLeadFlow();
@@ -85,11 +86,17 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-800">
               <img
-                src="/src/assets/images/hero_hvac_technician_1794122697811.jpg"
+                src={heroHvacTechnicianImg}
                 alt="Licensed ArcticFlow HVAC Technician testing central cooling condenser unit"
                 className="w-full h-[420px] sm:h-[480px] object-cover object-center"
                 referrerPolicy="no-referrer"
                 loading="eager"
+                onError={(e) => {
+                  const fallback = '/assets/images/hero_hvac_technician_1794122697811.jpg';
+                  if (e.currentTarget.src !== fallback) {
+                    e.currentTarget.src = fallback;
+                  }
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent pointer-events-none" />
 

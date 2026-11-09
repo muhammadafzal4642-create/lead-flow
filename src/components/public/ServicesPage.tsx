@@ -49,6 +49,12 @@ export const ServicesPage: React.FC = () => {
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                     loading="lazy"
+                    onError={(e) => {
+                      const fallback = '/assets/images/service_ac_repair_1794122698686.jpg';
+                      if (e.currentTarget.src !== fallback) {
+                        e.currentTarget.src = fallback;
+                      }
+                    }}
                   />
                   <div className="absolute top-4 left-4 bg-slate-900/90 text-white px-3 py-1.5 rounded-lg text-xs font-bold backdrop-blur-md">
                     Starting from ${srv.startingPrice}

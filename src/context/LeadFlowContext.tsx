@@ -141,7 +141,18 @@ export const LeadFlowProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [services, setServices] = useState<HvacService[]>(() => {
     try {
       const saved = localStorage.getItem(`${STORAGE_KEY}_services`);
-      return saved ? JSON.parse(saved) : INITIAL_SERVICES;
+      if (saved) {
+        const parsed: HvacService[] = JSON.parse(saved);
+        const defaultMap = new Map(INITIAL_SERVICES.map((s) => [s.id, s.image]));
+        return parsed.map((s) => ({
+          ...s,
+          // Replace any obsolete raw /src/ paths with the properly resolved bundled asset URL
+          image: (!s.image || s.image.startsWith('/src/assets/')) 
+            ? (defaultMap.get(s.id) || s.image) 
+            : s.image
+        }));
+      }
+      return INITIAL_SERVICES;
     } catch {
       return INITIAL_SERVICES;
     }

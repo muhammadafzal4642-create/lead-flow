@@ -53,6 +53,12 @@ export const ServiceManagement: React.FC = () => {
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                   loading="lazy"
+                  onError={(e) => {
+                    const fallback = '/assets/images/service_ac_repair_1794122698686.jpg';
+                    if (e.currentTarget.src !== fallback) {
+                      e.currentTarget.src = fallback;
+                    }
+                  }}
                 />
                 <div className="absolute top-3 right-3 bg-slate-900/90 text-white px-2.5 py-1 rounded-md text-xs font-bold">
                   ${srv.startingPrice}

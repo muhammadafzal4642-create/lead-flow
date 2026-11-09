@@ -1,4 +1,9 @@
 import { Lead, Appointment, HvacService, CompanySettings } from '../types';
+import serviceAcRepairImg from '../assets/images/service_ac_repair_1794122698686.jpg';
+import serviceAcInstallImg from '../assets/images/service_ac_install_1794122699222.jpg';
+import serviceHeatingRepairImg from '../assets/images/service_heating_repair_1794122699482.jpg';
+import heroHvacTechnicianImg from '../assets/images/hero_hvac_technician_1794122697811.jpg';
+import serviceDuctCleaningImg from '../assets/images/service_duct_cleaning_1794122699591.jpg';
 
 export const INITIAL_SERVICES: HvacService[] = [
   {
@@ -16,7 +21,7 @@ export const INITIAL_SERVICES: HvacService[] = [
     priceUnit: 'diagnostic fee (applied to repair)',
     turnaroundTime: 'Same-day service available',
     popular: true,
-    image: '/src/assets/images/service_ac_repair_1794122698686.jpg'
+    image: serviceAcRepairImg
   },
   {
     id: 'srv-2',
@@ -33,7 +38,7 @@ export const INITIAL_SERVICES: HvacService[] = [
     priceUnit: 'complete system installed',
     turnaroundTime: '1-2 business days for installation',
     popular: true,
-    image: '/src/assets/images/service_ac_install_1794122699222.jpg'
+    image: serviceAcInstallImg
   },
   {
     id: 'srv-3',
@@ -50,7 +55,7 @@ export const INITIAL_SERVICES: HvacService[] = [
     priceUnit: 'diagnostic fee (applied to repair)',
     turnaroundTime: 'Same-day heating dispatch',
     popular: false,
-    image: '/src/assets/images/service_heating_repair_1794122699482.jpg'
+    image: serviceHeatingRepairImg
   },
   {
     id: 'srv-4',
@@ -67,7 +72,7 @@ export const INITIAL_SERVICES: HvacService[] = [
     priceUnit: 'per system tune-up',
     turnaroundTime: 'Scheduled within 48 hours',
     popular: true,
-    image: '/src/assets/images/hero_hvac_technician_1794122697811.jpg'
+    image: heroHvacTechnicianImg
   },
   {
     id: 'srv-5',
@@ -84,7 +89,7 @@ export const INITIAL_SERVICES: HvacService[] = [
     priceUnit: 'single system whole-home',
     turnaroundTime: '3-4 hours completion time',
     popular: false,
-    image: '/src/assets/images/service_duct_cleaning_1794122699591.jpg'
+    image: serviceDuctCleaningImg
   },
   {
     id: 'srv-6',
@@ -101,7 +106,7 @@ export const INITIAL_SERVICES: HvacService[] = [
     priceUnit: 'emergency dispatch diagnostic',
     turnaroundTime: 'Immediate priority dispatch',
     popular: false,
-    image: '/src/assets/images/service_ac_repair_1794122698686.jpg'
+    image: serviceAcRepairImg
   }
 ];
 
