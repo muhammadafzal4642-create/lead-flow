@@ -1,0 +1,6 @@
+{
+  "name": "LeadFlow - HVAC Contractor Website & Lead Management Demo",
+  "description": "Premium demonstration website and lead management system for ArcticFlow Heating & Cooling HVAC contractors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
